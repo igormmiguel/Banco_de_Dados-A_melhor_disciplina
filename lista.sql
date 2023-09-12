@@ -41,3 +41,9 @@ select curso,count(a.id) as quantidade_alunos
 from alunos a
 join matriculas m on m.id  = a.id
 group by curso;
+
+-- 8
+
+select produto,avg(receita) as media_produto
+from vendas
+group by produto;
