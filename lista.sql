@@ -100,3 +100,9 @@ left join  livros jkr  on a.id = jkr.autor_id;
 select nome, curso
 from alunos a
 right join matriculas m on m.id  = a.id;
+
+-- 15
+
+select nome, curso
+from alunos a
+inner join matriculas m on m.id  = a.id;
