@@ -68,3 +68,12 @@ group by nome;
 select * 
 from quantidade_livros
 where total_livros_do_autor >= 2;
+
+-- 11
+
+CREATE VIEW livros_autores as
+select titulo,nome
+from livros jkr
+join autores a on a.id = jkr.autor_id;
+select *
+from livros_e_autores;
