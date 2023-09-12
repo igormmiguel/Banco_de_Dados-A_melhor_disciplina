@@ -47,3 +47,13 @@ group by curso;
 select produto,avg(receita) as media_produto
 from vendas
 group by produto;
+
+-- 9
+
+create VIEW receita_total as 
+select produto, sum(receita) as receita_t
+from vendas
+group by produto;
+select *
+from receita_total
+where receita_t >= "10000.00";
