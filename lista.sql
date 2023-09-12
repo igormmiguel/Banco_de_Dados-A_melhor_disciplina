@@ -35,3 +35,9 @@ from livros jkr
 join autores a on a.id =   jkr.autor_id
 group by nome;
 
+-- 7 
+
+select curso,count(a.id) as quantidade_alunos
+from alunos a
+join matriculas m on m.id  = a.id
+group by curso;
