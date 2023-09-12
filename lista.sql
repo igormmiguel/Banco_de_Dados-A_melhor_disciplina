@@ -136,3 +136,12 @@ select alunos.id as Aluno_ID,alunos.nome as Nome_Aluno,count(matriculas.id) as N
 from alunos
 left join  matriculas on alunos.id = matriculas.aluno_id
 group by alunos.id, alunos.nome;
+
+-- 20
+
+select produto,count(produto) as transacoes
+from vendas 
+group by produto
+order by transacoes desc
+limit 1
+;
